@@ -25,11 +25,16 @@ public class Task03 {
         int canCups = Math.min(water/200, milk/50);
         canCups = Math.min(canCups, beans/15);
 
-        if (wantCups == canCups)
+        if (wantCups == canCups) {
             System.out.println("Yes, I can make that amount of coffee");
-            else
-                if (canCups > wantCups)
-                    System.out.println("Yes, I can make that amount of coffee (and even " + (canCups - wantCups) +" more than that)");
-                else System.out.println("No, I can make only " + canCups + " cup(s) of coffee");
+        }
+        else {
+            if (canCups > wantCups) {
+                System.out.println("Yes, I can make that amount of coffee (and even " + (canCups - wantCups) + " more than that)");
+            }
+            else {
+                System.out.println("No, I can make only " + canCups + " cup(s) of coffee");
+            }
+        }
     }
 }
